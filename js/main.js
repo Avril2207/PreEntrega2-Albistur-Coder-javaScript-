@@ -100,7 +100,7 @@ let productosEnLista = []; //ARRAY DONDE SE VAN A IR ACUMULANDO LOS PRODUCTOS QU
     let idIngresado = Number(prompt(`Ingrese el id de su producto: `));
    
 
-    while(isNaN(idIngresado)){
+    while(isNaN(idIngresado)|| !buscarProducto(idIngresado)){
       alert ("Id no encontrado, vuelva a intentar.");
       idIngresado = Number(prompt(`Ingrese el id de su producto: `));
     }
@@ -118,9 +118,6 @@ let productosEnLista = []; //ARRAY DONDE SE VAN A IR ACUMULANDO LOS PRODUCTOS QU
       }else{
         alert(`El precio total es de $${valorFinal}. Gracias por su compra!`);
       }
-    }
-    else{
-      alert ("Id no encontrado, fin del programa"); //EN CASO DE QUE NO SE ENCUENTRE EL ID SE TERMINA EL PROGRAMA
-    }
+    };
   }
 
